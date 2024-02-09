@@ -1,11 +1,15 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const port = 3000;
+const port = 3111;
 
-app.get('/spaces', (req, res) => {
+app.get("/spaces", (req, res) => {
   return res.json([
     {
       name: null,
     },
   ]);
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });

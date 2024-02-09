@@ -19,7 +19,7 @@ paths:
                   spaces:
                     type: array
                     items:
-                      $ref: '#/components/schemas/Space'
+                      $ref: "#/components/schemas/Space"
 components:
   schemas: # Schemas should be nested under 'components/schemas'
     Space:

@@ -1,0 +1,16 @@
+schema {
+  query: Query
+}
+
+type Query {
+  "User's spaces"
+  spaces: spaces_200_response
+}
+
+type spaces_200_response {
+  spaces: [Space]!
+}
+
+type Space {
+  name: String
+}
