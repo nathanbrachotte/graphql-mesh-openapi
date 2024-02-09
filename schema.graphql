@@ -1,0 +1,8 @@
+type userDto {
+  id: String
+  accountId: String
+}
+
+type Query {
+  getUserInfo(id: String!): userDto!
+}

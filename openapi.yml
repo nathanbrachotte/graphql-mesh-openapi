@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: TestAPI
+  version: 2.1.0
+paths:
+  /spaces:
+    get:
+      summary: User's spaces
+      responses:
+        200:
+          description: User's spaces and space items
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - spaces
+                properties:
+                  spaces:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Space'
+components:
+  schemas: # Schemas should be nested under 'components/schemas'
+    Space:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          example: Communication
+          nullable: true

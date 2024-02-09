@@ -1,0 +1,28 @@
+{
+  "name": "graphql",
+  "version": "0.0.0",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "start:rest": "node ./server.js",
+    "start": "mesh build && mesh start",
+    "start:dev": "mesh dev"
+  },
+  "dependencies": {
+    "@graphql-mesh/cli": "^0.80.1",
+    "@graphql-mesh/config": "^8.0.34",
+    "@graphql-mesh/graphql": "^0.32.2",
+    "@graphql-mesh/merger-bare": "^0.15.49",
+    "@graphql-mesh/openapi": "^0.33.38",
+    "@graphql-mesh/runtime": "^0.44.35",
+    "@graphql-mesh/transform-filter-schema": "^0.14.112",
+    "@graphql-mesh/transform-naming-convention": "^0.12.2",
+    "@graphql-mesh/transform-rename": "^0.13.1",
+    "@graphql-mesh/transform-resolvers-composition": "^0.12.110",
+    "@graphql-mesh/types": "^0.87.0",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0"
+  }
+}

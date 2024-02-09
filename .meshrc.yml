@@ -1,0 +1,22 @@
+sources:
+  - name: graphql
+    handler:
+      graphql:
+        endpoint: http://temp
+        source: "./schema.graphql"
+        method: POST
+        useGETForQueries: false
+  - name: openApi
+    handler:
+      openapi:
+        source: ./openapi.yml
+        baseUrl: http://temp
+        ignoreErrorResponses: true
+    transforms:
+      - namingConvention:
+          mode: bare
+          typeNames: pascalCase
+          # enumValues: upperCase
+          fieldNames: camelCase
+          fieldArgumentNames: camelCase
+merger: bare
